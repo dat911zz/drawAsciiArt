@@ -7,6 +7,7 @@ void file();
 void BGcolor(int code);
 void ShowCur(bool CursorVisibility);
 int main()
+int main()
 {
 	int x;
 	SetConsoleOutputCP(65001);
@@ -14,9 +15,9 @@ int main()
 	cin >> x;
 	BGcolor(10);
 	Sleep(1000);
-	cout << "[Extracting files...]" << endl;
-	if (x == 100)
+	if (x == 100)//<-- password here!
 	{
+		cout << "[Extracting files...]" << endl;
 		BGcolor(15);
 		for (int i = 0; i <= 100; i+=10)
 		{
@@ -24,11 +25,15 @@ int main()
 			Sleep(500);
 		}
 		BGcolor(100);
+		cout << "Extract files Completed!..." << endl;
+		cout << endl;
+		file();
 	}
-	cout << "Extract files Completed!..." << endl;
-
-	cout << endl;
-	file();
+	else
+	{
+		system("color 04");
+		cout << "Wrong password!" << endl;
+	}
 	system("pause");
 }
 void file()
