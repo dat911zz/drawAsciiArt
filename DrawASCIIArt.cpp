@@ -4,7 +4,6 @@
 #include<Windows.h>
 using namespace std;
 void file();
-void draw();
 void BGcolor(int code);
 void ShowCur(bool CursorVisibility);
 int main()
@@ -32,16 +31,9 @@ int main()
 	file();
 	system("pause");
 }
-void draw()
-{
-	BGcolor(14);
-	Sleep(1000);
-	system("TYPE C:\\Users\\datcy\\source\\repos\\Program_DSKL\\banner.txt");
-	cout << endl;
-}
 void file()
 {
-	const char* filename = "../banner.txt";
+	const char* filename = "../banner.txt";//Link file here
 	BGcolor(10);
 
 	for (int i = 1; i < 5; i++)
