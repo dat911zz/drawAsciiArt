@@ -1,1 +1,2 @@
 # drawAsciiArt
+Author: Vu Dat
